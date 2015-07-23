@@ -13,3 +13,18 @@ Use module and external library in typescript
 ```
 	///<reference path="Mdl1bis.ts"/>
 ```
+
+To run the test, we must to compile and concatenate all the references into 1 file ([`all.js`](/internal-module/all.js)) with the `--out` option
+
+	$ tsc --out all.js Mdl1Consumer.ts
+
+Then you can execute
+
+	$ node all.js
+
+Output:
+
+	 Hello Java
+	 3
+	 Great Script
+*/
