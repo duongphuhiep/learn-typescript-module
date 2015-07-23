@@ -80,7 +80,9 @@ The execution output:
     a\b
     .txt
 
-See also: [`typescript-require`](https://github.com/eknkc/typescript-require)
+See also:
+* [Type Definition Repository](http://definitelytyped.org/tsd/)
+* [`typescript-require`](https://github.com/eknkc/typescript-require)
 
 ##Conclusion
 
