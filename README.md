@@ -7,14 +7,15 @@ Demonstration of how use module and consume external library in [Typescript](htt
 * [`Mdl1.ts`](/internal-module/Mdl1.ts) is a typical internal module
 * [`Mdl1bis.ts`](/internal-module/Mdl1bis.ts) extend the [`Mdl1.ts`](/internal-module/Mdl1.ts) using the [merging feature](http://www.typescriptlang.org/Handbook#declaration-merging-merging-modules) of Typescript. It references to the original [`Mdl1.ts`](/internal-module/Mdl1.ts) as following
 
-
+```
 	///<reference path="Mdl1.ts"/>
+```
 
 * The test [`Mdl1Consumer.ts`](/internal-module/Mdl1Consumer.ts) wants to use all functionality of `Mdl1` so it references to the [`Mdl1bis.ts`](/internal-module/Mdl1bis.ts) 
 
-
+```
 	///<reference path="Mdl1bis.ts"/>
-
+```
 
 To run the test, we must to compile and concatenate all the references into 1 file ([`all.js`](/internal-module/all.js)) with the `--out` option
 
@@ -38,11 +39,12 @@ Use top-level `export` to define a external module
 * [`Mdl3.ts`](/external-module/Mdl3.ts) add namespace level to the module
 * The test [`Consumer.ts`](/external-module/Consumer.ts) is compiled and run normally, it gives the following output:
 
-
+```
 	$ node Consumer.js
 
 	Hello external TOTO
 	Hello external with namespace Mdl3 TUTU
+```
 
 ##External library [example](/external-library)
 
@@ -58,17 +60,19 @@ Use top-level `export` to define a external module
 * The typescript test [`ConsumerExtlib1.ts`](/external-library/ConsumerExtlib1.ts) consume the [`extlib1.js`](/external-library/extlib1.js) library
 * The library [`extlib1.js`](/external-library/extlib1.js) is loaded in the `script` tag of [`index.html`](/external-library/index.html)
 
-
+```
 	<script language="javascript" src="extlib1.js"></script>
+```
  
 ###Ambient External Module
 
 * [`nodelib.d.ts`](/external-library/nodelib.d.ts) describes the shape of a nodejs module (it's the [*`path`* module](https://nodejs.org/api/path.html) in this example) 
 * The test [`ConsumerNodelib.ts`](/external-library/ConsumerNodelib.ts) must to reference to the ambient declaration file and import the module:
  
-  
+```
 	 ///<reference path="nodelib.d.ts"/>
     import path=require("path");
+```
 
 The execution output:
 
