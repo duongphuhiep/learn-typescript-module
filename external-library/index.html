@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test external library</title>
+</head>
+<body>
+	<div id="greet"></div>
+
+	<script language="javascript" src="extlib1.js"></script>
+	<script language="javascript" src="ConsumerExtlib1.js"></script>
+
+	<script language="javascript">
+		//normal consummation
+		var name = extlib1.normalize("world");
+		console.log(name);
+
+		//consume via a Typescript:
+		// this function comes from ConsumerExt1lib.ts
+		printHello("java");
+	</script>
+</body>
+</html>
