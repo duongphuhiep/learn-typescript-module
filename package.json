@@ -1,0 +1,10 @@
+{
+  "name": "tuto-ts-module",
+  "version": "1.0.0",
+  "description": "Training Typescript - Module and external library",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hiep <duongphuhiep@gmail.com>",
+  "license": "MIT"
+}
